@@ -753,6 +753,35 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   hi! link markdownH5 OneHue5
   hi! link markdownH6 OneHue5
   hi! link markdownListMarker OneHue5
+
+  " Support for markdown syntax
+  hi! link htmlH1           OneHue5
+  hi! link htmlH2           OneHue5
+  hi! link htmlH3           OneHue5
+  hi! link htmlH3           OneHue5
+  hi! link htmlH4           OneHue5
+  hi! link htmlH5           OneHue5
+  hi! link htmlH6           OneHue5
+  hi! link mkdString        String
+  hi! link mkdCode          markdownCode
+  hi! link mkdCodeDelimiter markdownCodeDelimiter
+  hi! link mkdCodeStart     markdownCodeBlock
+  hi! link mkdCodeEnd       markdownCodeBlock
+  hi! link mkdFootnote      Comment
+  hi! link mkdBlockquote    Comment
+  hi! link mkdListItem      Identifier
+  hi! link mkdRule          Identifier
+  hi! link mkdLineBreak     Visual
+  hi! link mkdFootnotes     htmlLink
+  hi! link mkdLink          htmlLink
+  hi! link mkdURL           markdownUrl
+  hi! link mkdInlineURL     markdownUrl
+  hi! link mkdID            Identifier
+  hi! link mkdLinkDef       mkdID
+  hi! link mkdLinkDefTarget mkdURL
+  hi! link mkdLinkTitle     htmlString
+  hi! link mkdDelimiter     Delimiter
+
   " }}}
 
   " PHP highlighting --------------------------------------------------------{{{
