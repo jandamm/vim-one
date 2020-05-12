@@ -5,6 +5,15 @@ excellent text editor). **One** supports *true colors* and falls back
 gracefully and automatically if your environment does not support this
 feature.
 
+# Disclaimer
+
+This is my personal branch by merging the branch of laggardkernel with
+the original version by rakr. **This fork is not stable, it may add
+breaking changes and more.** I'll use this branch to tailor the theme
+to my personal needs. I consider it a part of my [dotfiles](https://github.com/jandamm/dotfiles),
+but keep it separate to have an easier time to merge features from
+other forks.
+
 ## Everything You Should Know about This Fork
 
 It seems rakr stopped maintaining the original repo and there's been
