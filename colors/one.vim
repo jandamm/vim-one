@@ -508,6 +508,13 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   hi! link asciidocListingBlock OneMono2
   " }}}
 
+  " Bash highlighting ---------------------------------------------------{{{
+  hi! link shCmdSubRegion OneMono3
+  hi! link shDerefSimple OneHue62
+  hi! link shDerefVar OneHue62
+  hi! link shDerefDelim OneMono3
+  " }}}
+
   " C/C++ highlighting ------------------------------------------------------{{{
   hi! link cInclude OneHue3
   hi! link cPreCondit OneHue3
