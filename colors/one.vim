@@ -320,6 +320,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:mono_2 = ['#828997', '102']
     let s:mono_3 = ['#5c6370', '59']
     let s:mono_4 = ['#4b5263', '59']
+    let s:mono_5 = ['#eaeaea', '255']
 
     let s:hue_1  = ['#56b6c2', '73'] " cyan
     let s:hue_2  = ['#61afef', '75'] " blue
@@ -352,6 +353,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:mono_2 = ['#696c77', '60']
     let s:mono_3 = ['#a0a1a7', '145']
     let s:mono_4 = ['#c2c2c3', '250']
+    let s:mono_5 = ['#ffffff', '255']
 
     let s:hue_1  = ['#0184bc', '31'] " cyan
     let s:hue_2  = ['#4078f2', '33'] " blue
@@ -434,9 +436,9 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
   hi! link StatusLineNC OneMono3
-  call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
-  call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
-  call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
+  call <sid>X('TabLine',      s:syntax_fg,     s:syntax_cursor,  'none')
+  call <sid>X('TabLineFill',  s:syntax_fg,     s:syntax_cursor,  'none')
+  call <sid>X('TabLineSel',   s:mono_5,        s:mono_3,         'bold')
   call <sid>X('Title',        s:syntax_fg,     '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
