@@ -294,11 +294,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   fun <SID>user_color_palette(style)
     let l:color= ['', '']
     for i in ['mono_1', 'mono_2', 'mono_3', 'mono_4',
-      \ 'hue_1', 'hue_2', 'hue_3', 'hue_4',
-      \ 'hue_5', 'hue_5_2', 'hue_6', 'hue_6_2',
-      \ 'syntax_bg', 'syntax_gutter', 'syntax_cursor', 'syntax_accent', 'syntax_accent_2',
-      \ 'vertsplit', 'special_grey', 'visual_grey', 'pmenu',
-      \ 'syntax_fg', 'syntax_fold_bg' ]
+          \ 'hue_1', 'hue_2', 'hue_3', 'hue_4',
+          \ 'hue_5', 'hue_5_2', 'hue_6', 'hue_6_2',
+          \ 'syntax_bg', 'syntax_gutter', 'syntax_cursor', 'syntax_accent', 'syntax_accent_2',
+          \ 'vertsplit', 'special_grey', 'visual_grey', 'pmenu',
+          \ 'syntax_fg', 'syntax_fold_bg' ]
       if exists('g:one_' . a:style . '_' . i)
         exe 'let l:color[0] = g:one_' . a:style . '_' . i
         let l:color[0] = substitute(l:color[0], '#', '', '')
@@ -928,7 +928,30 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " ALE (Asynchronous Lint Engine) highlighting -----------------------------{{{
   hi! link ALEWarningSign OneHue62
   hi! link ALEErrorSign OneHue5
+  "}}}
 
+  " Neomake highlighting -----------------------------{{{
+  hi! link NeomakeError OneHue5
+  hi! link NeomakeWarning OneHue6
+  hi! link NeomakeInfo OneHue2
+  hi! link NeomakeNote NeomakeInfo
+
+  hi! link NeomakeErrorSign NeomakeError
+  hi! link NeomakeWarningSign NeomakeWarning
+  hi! link NeomakeInfoSign NeomakeInfo
+  hi! link NeomakeNoteSign NeomakeNote
+
+  hi! link NeomakeVirtualtextError NeomakeError
+  hi! link NeomakeVirtualtextWarning NeomakeWarning
+  hi! link NeomakeVirtualtextInfo NeomakeInfo
+  hi! link NeomakeVirtualtextNote NeomakeNote
+
+  hi! link NeomakeStatColorDefault StatusLine
+  call <sid>X('NeomakeStatColorTypeE', s:hue_5, s:syntax_cursor, 'none')
+  call <sid>X('NeomakeStatColorTypeW', s:hue_6, s:syntax_cursor, 'none')
+  hi! link NeomakeStatColorTypeI NeomakeStatColorDefault
+  hi! link NeomakeStatColorTypeN NeomakeStatColorTypeI
+  "}}}
 
   " Neovim NERDTree Background fix ------------------------------------------{{{
   hi! link NERDTreeFile OneSyntaxFg
@@ -953,6 +976,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let g:terminal_color_7  = "#e3e5e9"
     let g:terminal_color_15 = "#e3e5e9"
   endif
+  "}}}
 
   " Delete functions =========================================================={{{
   " delf <SID>X
