@@ -633,6 +633,9 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   hi! link gitcommitSelectedArrow  gitcommitSelectedFile
   hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 
+  hi! link gitcommitSummary OneHue62
+  hi! link gitcommitOverflow Error
+
   hi! link SignifySignAdd OneHue4
   hi! link SignifySignChange OneHue62
   hi! link SignifySignDelete OneHue5
