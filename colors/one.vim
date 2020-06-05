@@ -400,6 +400,21 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('OneHue52', s:hue_5_2, '', '')
   call <sid>X('OneHue6', s:hue_6, '', '')
   call <sid>X('OneHue62', s:hue_6_2, '', '')
+  " Pre-define statusline hi groups -----------------------------------------{{{
+  call <sid>X('OneStatusLineMono1', s:mono_1, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineMono2', s:mono_2, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineMono3', s:mono_3, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineMono4', s:mono_4, s:syntax_cursor, '')
+
+  call <sid>X('OneStatusLineHue1', s:hue_1, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue2', s:hue_2, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue3', s:hue_3, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue4', s:hue_4, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue5', s:hue_5, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue52', s:hue_5_2, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue6', s:hue_6, s:syntax_cursor, '')
+  call <sid>X('OneStatusLineHue62', s:hue_6_2, s:syntax_cursor, '')
+  " }}}
 
   hi! link OneSyntaxFg OneMono1
   " }}}
@@ -947,8 +962,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   hi! link NeomakeVirtualtextNote NeomakeNote
 
   hi! link NeomakeStatColorDefault StatusLine
-  call <sid>X('NeomakeStatColorTypeE', s:hue_5, s:syntax_cursor, 'none')
-  call <sid>X('NeomakeStatColorTypeW', s:hue_6, s:syntax_cursor, 'none')
+  hi! link NeomakeStatColorTypeE OneStatusLineHue5
+  hi! link NeomakeStatColorTypeW OneStatusLineHue6
   hi! link NeomakeStatColorTypeI NeomakeStatColorDefault
   hi! link NeomakeStatColorTypeN NeomakeStatColorTypeI
   "}}}
