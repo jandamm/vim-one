@@ -3,6 +3,11 @@
 " License: MIT
 " Version: 1.1.1-pre
 
+if exists('g:loaded_vim_one')
+  finish
+endif
+let g:loaded_vim_one = 1
+
 " Global setup =============================================================={{{
 
 if exists("*<SID>X")
