@@ -953,24 +953,24 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " Neomake highlighting -----------------------------{{{
   hi! link NeomakeError OneHue5
   hi! link NeomakeWarning OneHue6
-  hi! link NeomakeInfo OneHue2
-  hi! link NeomakeNote NeomakeInfo
+  hi! link NeomakeInfo OneHue1
+  hi! link NeomakeMessage NeomakeInfo
 
   hi! link NeomakeErrorSign NeomakeError
   hi! link NeomakeWarningSign NeomakeWarning
   hi! link NeomakeInfoSign NeomakeInfo
-  hi! link NeomakeNoteSign NeomakeNote
+  hi! link NeomakeMessageSign NeomakeMessage
 
   hi! link NeomakeVirtualtextError NeomakeError
   hi! link NeomakeVirtualtextWarning NeomakeWarning
   hi! link NeomakeVirtualtextInfo NeomakeInfo
-  hi! link NeomakeVirtualtextNote NeomakeNote
+  hi! link NeomakeVirtualtextMessage NeomakeMessage
 
   hi! link NeomakeStatColorDefault StatusLine
   hi! link NeomakeStatColorTypeE OneStatusLineHue5
   hi! link NeomakeStatColorTypeW OneStatusLineHue6
-  hi! link NeomakeStatColorTypeI NeomakeStatColorDefault
-  hi! link NeomakeStatColorTypeN NeomakeStatColorTypeI
+  hi! link NeomakeStatColorTypeI OneStatusLineHue1
+  hi! link NeomakeStatColorTypeM NeomakeStatColorTypeI
   "}}}
 
   " Neovim NERDTree Background fix ------------------------------------------{{{
