@@ -3,10 +3,13 @@
 " License: MIT
 " Version: 1.1.1-pre
 
-if exists('g:loaded_vim_one')
-  finish
-endif
-let g:loaded_vim_one = 1
+" let s:background = exists('s:dark') ? s:dark ? 'dark' : 'light' : ''
+
+" if &background ==# s:background && exists('g:colors_name') && g:colors_name ==# 'one'
+"   " Nothing has changed.
+"   " Unfortunately starting vim then has no colors until interaction with vim
+"   finish
+" endif
 
 " Global setup =============================================================={{{
 
