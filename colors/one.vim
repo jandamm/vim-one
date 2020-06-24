@@ -982,22 +982,22 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   " Neovim Terminal Colors --------------------------------------------------{{{
   if has('nvim') && g:one_termcolors != 0
-    let g:terminal_color_0  = "#353a44"
-    let g:terminal_color_8  = "#353a44"
-    let g:terminal_color_1  = "#e88388"
-    let g:terminal_color_9  = "#e88388"
-    let g:terminal_color_2  = "#a7cc8c"
-    let g:terminal_color_10 = "#a7cc8c"
-    let g:terminal_color_3  = "#ebca8d"
-    let g:terminal_color_11 = "#ebca8d"
-    let g:terminal_color_4  = "#72bef2"
-    let g:terminal_color_12 = "#72bef2"
-    let g:terminal_color_5  = "#d291e4"
-    let g:terminal_color_13 = "#d291e4"
-    let g:terminal_color_6  = "#65c2cd"
-    let g:terminal_color_14 = "#65c2cd"
-    let g:terminal_color_7  = "#e3e5e9"
-    let g:terminal_color_15 = "#e3e5e9"
+    let g:terminal_color_0  = '#282c34'
+    let g:terminal_color_1  = '#e06c75'
+    let g:terminal_color_2  = '#98c379'
+    let g:terminal_color_3  = '#e5c07b'
+    let g:terminal_color_4  = '#61afef'
+    let g:terminal_color_5  = '#c678dd'
+    let g:terminal_color_6  = '#56b6c2'
+    let g:terminal_color_7  = '#abb2bf'
+    let g:terminal_color_8  = '#545862'
+    let g:terminal_color_9  = '#be5046'
+    let g:terminal_color_10 = g:terminal_color_2
+    let g:terminal_color_11 = '#d19a66'
+    let g:terminal_color_12 = g:terminal_color_4
+    let g:terminal_color_13 = g:terminal_color_5
+    let g:terminal_color_14 = g:terminal_color_6
+    let g:terminal_color_15 = '#c8ccd4'
   endif
 
   hi! link TermCursorNC Visual
