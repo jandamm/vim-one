@@ -28,11 +28,13 @@ if exists("*<SID>X")
 endif
 
 hi clear
-syntax reset
-if exists('g:colors_name')
-  unlet g:colors_name
+if g:syntax_on
+  syntax reset
 endif
-let g:colors_name = 'one'
+
+if exists('g:colors_name') && g:colors_name !=# 'one'
+  let g:colors_name = 'one'
+endif
 
 if !exists('g:one_allow_italics')
   let g:one_allow_italics = 0
